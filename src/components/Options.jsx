@@ -16,8 +16,8 @@ class Options extends React.Component {
 export default Options;
 
 const Button = styled.button`
-background: white;
-color: seagreen;
+background: seagreen;
+color: white;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;

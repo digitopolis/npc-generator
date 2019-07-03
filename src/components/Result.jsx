@@ -3,6 +3,10 @@ import styled from 'styled-components'
 
 class Result extends React.Component {
 
+	getDetails = () => {
+		
+	}
+
 	displayResult = () => {
 		if (this.props.race) {
 			return (
@@ -11,6 +15,9 @@ class Result extends React.Component {
 					<Button >
 						How about a sub-race & class?
 					</Button>
+					<div>
+
+					</div>
 				</div>
 			)
 		} else {

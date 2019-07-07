@@ -4,11 +4,12 @@ import styled from 'styled-components'
 class Result extends React.Component {
 
 	getDetails = () => {
-		
+
 	}
 
 	displayResult = () => {
 		if (this.props.race) {
+			console.log(this.props)
 			return (
 				<div>
 					<h2>Lvl {this.props.lvl} {this.props.race} {this.props.class}!</h2>

@@ -3,8 +3,20 @@ import styled from 'styled-components'
 
 class Result extends React.Component {
 
-	getDetails = () => {
+	state = {
+		extras: false
+	}
 
+	getDetails = () => {
+		this.setState({ extras: true })
+	}
+
+	displayExtras = () => {
+		if (this.state.extras) {
+			return (
+				<h2>A {this.props.subrace} {this.props.subclass} {this.props.class}!</h2>
+			)
+		}
 	}
 
 	displayResult = () => {
@@ -13,11 +25,11 @@ class Result extends React.Component {
 			return (
 				<div>
 					<h2>Lvl {this.props.lvl} {this.props.race} {this.props.class}!</h2>
-					<Button >
+					<Button onClick={this.getDetails}>
 						How about a sub-race & class?
 					</Button>
 					<div>
-
+						{this.displayExtras()}
 					</div>
 				</div>
 			)

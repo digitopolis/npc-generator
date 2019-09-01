@@ -2,12 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 class Options extends React.Component {
+
+	handleChange = (event) => {
+		this.props.selectOption(event.target.name, event.target.value)
+	}
+
 	render () {
 		return (
 			<LeftDiv>
-				<select>
+				<select name='race' onChange={this.handleChange}>
+					<option value="" disabled selected>Select a race</option>
 					{this.props.races.map(race => {
-						return <option>{race.name}</option>
+						return <option key={race.name} value={race.name}>{race.name}</option>
 					})}
 				</select>
 				<Button onClick={this.props.getResult}>

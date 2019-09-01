@@ -35,10 +35,17 @@ class Generator extends React.Component {
 		this.setState({ result })
 	}
 
+	selectOption = (name, value) => {
+		console.log(name, value)
+	}
+
 	render () {
 		return (
 			<div className='container'>
-				<Options races={this.state.races} getResult={this.generateResult}/>
+				<Options
+					races={this.state.races}
+					getResult={this.generateResult}
+					selectOption={this.selectOption}/>
 				<Result {...this.state.result}/>
 			</div>
 		)

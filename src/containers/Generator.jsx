@@ -37,6 +37,9 @@ class Generator extends React.Component {
 
 	selectOption = (name, value) => {
 		console.log(name, value)
+		const newResult = this.state.result || {}
+		newResult[`${name}`] = value
+		this.setState({ result: newResult })
 	}
 
 	render () {

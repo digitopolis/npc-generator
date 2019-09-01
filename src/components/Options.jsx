@@ -4,16 +4,21 @@ import styled from 'styled-components'
 class Options extends React.Component {
 	render () {
 		return (
-			<div>
+			<LeftDiv>
 				<Button onClick={this.props.getResult}>
 					Give me a race and class!
 				</Button>
-			</div>
+			</LeftDiv>
 		)
 	}
 }
 
 export default Options;
+
+const LeftDiv = styled.div`
+	width: 200px;
+	margin: auto;
+`
 
 const Button = styled.button`
 background: seagreen;

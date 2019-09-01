@@ -39,12 +39,17 @@ class Result extends React.Component {
 	}
 	render () {
 		return (
-			<div>{this.displayResult()}</div>
+			<RightDiv>{this.displayResult()}</RightDiv>
 		)
 	}
 }
 
 export default Result;
+
+const RightDiv = styled.div`
+	max-width: 400px;
+	margin: auto;
+`
 
 const Button = styled.button`
 background: seagreen;

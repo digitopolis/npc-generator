@@ -24,7 +24,8 @@
 }
 
 .container {
-	flex: auto;
+	display: flex;
+	justify-content: center;
 }
 
 @keyframes App-logo-spin {

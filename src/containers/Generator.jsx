@@ -38,7 +38,7 @@ class Generator extends React.Component {
 	render () {
 		return (
 			<div className='container'>
-				<Options getResult={this.generateResult}/>
+				<Options races={this.state.races} getResult={this.generateResult}/>
 				<Result {...this.state.result}/>
 			</div>
 		)

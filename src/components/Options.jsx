@@ -5,8 +5,13 @@ class Options extends React.Component {
 	render () {
 		return (
 			<LeftDiv>
+				<select>
+					{this.props.races.map(race => {
+						return <option>{race.name}</option>
+					})}
+				</select>
 				<Button onClick={this.props.getResult}>
-					Give me a race and class!
+					Generate!
 				</Button>
 			</LeftDiv>
 		)

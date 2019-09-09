@@ -24,7 +24,7 @@ class Result extends React.Component {
 			console.log(this.props)
 			return (
 				<div>
-					<h2>Lvl {this.props.lvl} {this.props.race} {this.props.class}!</h2>
+					<h2>Lvl {this.props.lvl} {this.props.race} {this.props.charClass}!</h2>
 					<Button onClick={this.getDetails}>
 						How about a sub-race & class?
 					</Button>

@@ -30,7 +30,7 @@ class Generator extends React.Component {
 		console.log(randomRace, randomClass);
 		result.race = this.state.result ? this.state.result.race : randomRace.name
 		result.subrace = randomRace.subraces[(Math.floor(Math.random() * randomRace.subraces.length))].name
-		result.class = randomClass.name
+		result.charClass = randomClass.name
 		result.subclass = randomClass.subclasses[(Math.floor(Math.random() * randomClass.subclasses.length))].name
 		result.lvl = Math.floor(Math.random() * 20) + 1
 		this.setState({

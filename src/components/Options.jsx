@@ -16,6 +16,12 @@ class Options extends React.Component {
 						return <option key={race.name} value={race.name}>{race.name}</option>
 					})}
 				</select>
+				Class: <select name='charClass' onChange={this.handleChange}>
+					<option value="" disabled selected>Select a class</option>
+					{this.props.classes.map(charClass => {
+						return <option key={charClass.name} value={charClass.name}>{charClass.name}</option>
+					})}
+				</select>
 				<Button onClick={this.props.getResult}>
 					Generate!
 				</Button>

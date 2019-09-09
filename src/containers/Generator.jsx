@@ -51,6 +51,7 @@ class Generator extends React.Component {
 			<div className='container'>
 				<Options
 					races={this.state.races}
+					classes={this.state.classes}
 					getResult={this.generateResult}
 					selectOption={this.selectOption}/>
 				{this.state.submitted ? <Result {...this.state.result}/> : null}

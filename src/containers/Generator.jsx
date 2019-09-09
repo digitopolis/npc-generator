@@ -9,7 +9,8 @@ class Generator extends React.Component {
 	state = {
 		races: DATA.races,
 		classes: DATA.classes,
-		result: null
+		result: null,
+		submitted: false
 	}
 
 	// async componentDidMount() {
@@ -32,7 +33,10 @@ class Generator extends React.Component {
 		result.class = randomClass.name
 		result.subclass = randomClass.subclasses[(Math.floor(Math.random() * randomClass.subclasses.length))].name
 		result.lvl = Math.floor(Math.random() * 20) + 1
-		this.setState({ result })
+		this.setState({
+			result: result,
+		 	submitted: true
+		})
 	}
 
 	selectOption = (name, value) => {
@@ -49,7 +53,7 @@ class Generator extends React.Component {
 					races={this.state.races}
 					getResult={this.generateResult}
 					selectOption={this.selectOption}/>
-				<Result {...this.state.result}/>
+				{this.state.submitted ? <Result {...this.state.result}/> : null}
 			</div>
 		)
 	}

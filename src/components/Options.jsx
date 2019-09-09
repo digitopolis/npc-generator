@@ -10,7 +10,7 @@ class Options extends React.Component {
 	render () {
 		return (
 			<LeftDiv>
-				<select name='race' onChange={this.handleChange}>
+				Race: <select name='race' onChange={this.handleChange}>
 					<option value="" disabled selected>Select a race</option>
 					{this.props.races.map(race => {
 						return <option key={race.name} value={race.name}>{race.name}</option>
